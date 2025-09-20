@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2025-09-20 03:10:27">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="EC2 Monitoring and Remediation">59818d3f487b22107f44bce61d34c895</application>
+<application_name>EC2 Monitoring and Remediation</application_name>
+<application_scope>x_snc_ec2_monito_0</application_scope>
+<application_version>1.0.0</application_version>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description/>
+<inserted/>
+<name>EC2_AI_Enhancement - RG</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>1affa512a08432107f441b8d9cac5c5e</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>219e4696a08832107f441b8d9cac5c43</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_agent_bd4efe256c4032107f445a580b36c625</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent"><sn_aia_agent action="INSERT_OR_UPDATE"><description>Helps DevOps engineers restart EC2 instances from incident tickets by reading incident descriptions and executing remediation scripts with human approval</description><instructions>You are an AI Agent responsible for EC2 remediation assistance. Your job is to help DevOps engineers restart AWS EC2 instances using the existing remediation system. You do not need to access or modify script. Your role is to understand natural language inputs and extract technical information accurately. 
+
+When a DevOps engineer provides an incident number (e.g., INC0010028), retrieve the corresponding incident record from the incident table using the number field. Once you retrieve the incident, read the description field. From the description, identify the EC2 instance ID. The instance ID will follow the pattern i-xxxxxxxxxxxxxxxxx and may be listed under “Instance ID:” in the description body. 
+
+Once you extract the EC2 instance ID, ask the user for confirmation. For example: 
+
+ “I found EC2 instance i-0713d1873867e592 in incident INC0010028. Should I go ahead and restart this instance?” 
+
+Only proceed after confirmation. 
+
+To perform the remediation, use the Script Tool EC2 Remediation Tool. Pass the instance_id as input. 
+
+Do not ask the user for the description or the instance ID. Your responsibility is to retrieve and extract those from the incident automatically.</instructions><internal_name>global.global.EC2 Remediation Assistant</internal_name><name>EC2 Remediation Assistant</name><proficiency>- The agent is specialized in EC2 remediation within DevOps operations, focusing on assisting engineers in restarting AWS EC2 instances using the existing remediation system. The agent's expertise lies in understanding natural language inputs and accurately extracting technical information to facilitate the remediation process.
+- The agent can retrieve incident records from the incident table using the incident number provided by DevOps engineers. It then reads the description field to identify and extract the EC2 instance ID, which is necessary for initiating the remediation process.
+- The agent utilizes the EC2 Remediation Tool to initiate the remediation of AWS EC2 instances. It passes the extracted instance_id as input to the tool, ensuring the correct instance is targeted for remediation.
+- The agent employs the Incident Lookup tool to retrieve incident records from the incident table using the incident number. This tool returns the description field, allowing the agent to automatically extract EC2 instance IDs for remediation without user intervention.
+- The agent effectively combines the Incident Lookup and EC2 Remediation Tool to perform a complete EC2 remediation procedure. It retrieves the incident record, extracts the instance ID, confirms with the user, and initiates remediation, showcasing its ability to integrate tools for streamlined operations.</proficiency><record_type>custom</record_type><role>EC2 remediation specialist for DevOps operations</role><run_as/><strategy display_value="ReAct">f0bff21f9f13c6108f431597d90a1c74</strategy><sys_class_name>sn_aia_agent</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-17 22:44:58</sys_created_on><sys_domain>global</sys_domain><sys_id>bd4efe256c4032107f445a580b36c625</sys_id><sys_mod_count>41</sys_mod_count><sys_name>EC2 Remediation Assistant</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_aia_agent_bd4efe256c4032107f445a580b36c625</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-20 01:24:42</sys_updated_on></sn_aia_agent></record_update>]]></payload>
+<payload_hash>-1224738422</payload_hash>
+<remote_update_set display_value="EC2_AI_Enhancement - RG">219e4696a08832107f441b8d9cac5c43</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>219e4696a08832107f441b8d9cac5c44</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19964c1a0f50000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<table/>
+<target_name>EC2 Remediation Assistant</target_name>
+<type>AI Agent</type>
+<update_domain>global</update_domain>
+<update_guid>2f78b91692c4321087579da96f269111</update_guid>
+<update_guid_history>2f78b91692c4321087579da96f269111:-1224738422,2c66bdde0a843210cffe280c64b9b017:-1224738422,f18e215e8d443210eb047879ab1128b1:155597538,d17ce11a4a4432109a6a8e03bac8fceb:-1144295089,5d9a2116a144321072a52d467364c724:-449520855,e78a21167944321083ea425f1ff5902c:-1166180640,598aed5272443210db192e26541d2e8f:1554565910,e75a69d2bb443210921505ab2860b323:1770360890,d15ae1d20a443210b1779e69d07df2f5:640099085,c14a25d2204432100ca2cfd015f5bd33:-1336485655,dbd8edde2a043210bf42a9ec7b0ec118:-1926051886,b1d8ad9e3d0432102208418b63370e88:551572448,c967e51e0e0432100e4e852c79758b73:-409528841,a357a51e450432105f4545b56f833887:-269553305,5cb9191e9d8032103b972606014bcff6:-489088169,f6a95ddadc803210bf403265ba0e1790:1709834804,e0e8d59aa7803210f5655648b60699bb:-470228584,b90715960380321056c22cadd2f5e313:98291812,1c07d19618803210f4a649ad93094230:-1252024950,bb1611166f803210ca72f186f94cc8a4:-232887462,1e16111605803210bfbc5cd82e5443b1:-824534923,56555592e1803210a3bab4f8db17c94e:-1722720178,8f45dd5276803210a83d1f040ea0a9cb:243820827,8225d952da803210d499fab1a144f576:607102865,7825995264803210e53b755630b11f5f:-716151875,6fb49912b8803210b2a23fd62d041b34:-1046476288,adb419125e8032102bf41a6987a6be71:1841487579,8e1491de764032106261637bfcfc81f7:-1134655437,1c149d9e144032108ffa9376cd9e94e8:1161416422,f89219dac5403210be051eb47eae262b:-490687460,838255dabf403210d336be7f6b938b24:-148312393,a902159a9340321051fe19c880d3f380:-1783383674,5002d19af240321044ed0507ef8c5a55:1790263743,eb705d9651403210aa306bf058dd5d11:-1976940380,4aff0956714032106f037fdd2be094ac:-1067212611,b9bf4d162b40321065db7f261cd673f5:-1158619418,9a5fcdd2ed40321037b389a057df9320:876318641,b45f45d2b14032101c24615bed10d94d:1679262618,aa5e8952fc4032100abbd84b024ef19f:100332053,b45e4152334032105698c35213ed1f06:516612495,f671cf2dc440321085f4a9631742a407:-375610533,aecebaa5f6403210bc36060f588564b3:1218707718,a1ae32a5534032108c6e69d47bc5b970:-1454978351</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_ec86b5dea08432107f441b8d9cac5c75</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="EC2 Remediation Assistant">bd4efe256c4032107f445a580b36c625</agent><context/><conversation display_value="Created 2025-09-20 01:25:16">49863512a0c432107f441b8d9cac5c0f</conversation><objective>help me resolve INC0010028</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-20 01:25:15</sys_created_on><sys_domain>global</sys_domain><sys_id>ec86b5dea08432107f441b8d9cac5c75</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-20 01:25:57</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>-797877608</payload_hash>
+<remote_update_set display_value="EC2_AI_Enhancement - RG">219e4696a08832107f441b8d9cac5c43</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>259e4696a08832107f441b8d9cac5c46</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19964cec9eb0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<table/>
+<target_name>ec86b5dea08432107f441b8d9cac5c75</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>8ecb391effc432108b6574cbdc48a4a9</update_guid>
+<update_guid_history>8ecb391effc432108b6574cbdc48a4a9:-797877608,5cf8319612c432108958bbd7aba98c89:-797877608</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_8ea769daa00432107f441b8d9cac5cfb</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="EC2 Remediation Assistant">bd4efe256c4032107f445a580b36c625</agent><context/><conversation display_value="Created 2025-09-20 00:20:22">daa7a15ea00432107f441b8d9cac5cdb</conversation><objective>help me with INC0010028</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-20 00:20:21</sys_created_on><sys_domain>global</sys_domain><sys_id>8ea769daa00432107f441b8d9cac5cfb</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-20 00:21:07</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>1373209231</payload_hash>
+<remote_update_set display_value="EC2_AI_Enhancement - RG">219e4696a08832107f441b8d9cac5c43</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>299e4696a08832107f441b8d9cac5c45</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19964cec97d0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<table/>
+<target_name>8ea769daa00432107f441b8d9cac5cfb</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>8acb391e72c432109939764a0cceb7a3</update_guid>
+<update_guid_history>8acb391e72c432109939764a0cceb7a3:1373209231,a5e8bd569dc4321083baa5f030cfa3ce:1373209231</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_4a8ce116a04432107f441b8d9cac5c47</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="EC2 Remediation Assistant">bd4efe256c4032107f445a580b36c625</agent><context/><conversation display_value="Created 2025-09-20 00:41:40">9a8cedd6a04432107f441b8d9cac5cb6</conversation><objective>help me resolve INC0010028</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-20 00:41:39</sys_created_on><sys_domain>global</sys_domain><sys_id>4a8ce116a04432107f441b8d9cac5c47</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-20 00:42:26</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>99017919</payload_hash>
+<remote_update_set display_value="EC2_AI_Enhancement - RG">219e4696a08832107f441b8d9cac5c43</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>2d9e4696a08832107f441b8d9cac5c44</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19964cec89a0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<table/>
+<target_name>4a8ce116a04432107f441b8d9cac5c47</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>8ecb351eb4c43210a1bc3dc3dbcb0256</update_guid>
+<update_guid_history>8ecb351eb4c43210a1bc3dc3dbcb0256:99017919,e5e8bd569cc4321032dee60d89cff6ba:99017919</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_c6bad59ea08032107f441b8d9cac5cb4</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="EC2 Remediation Assistant">bd4efe256c4032107f445a580b36c625</agent><context/><conversation display_value="Created 2025-09-19 23:23:51">5ebad99ea08032107f441b8d9cac5c0f</conversation><objective>restart Instance ID: i-0713d1873867ce592
+</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-19 23:23:49</sys_created_on><sys_domain>global</sys_domain><sys_id>c6bad59ea08032107f441b8d9cac5cb4</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-19 23:24:06</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>-791132028</payload_hash>
+<remote_update_set display_value="EC2_AI_Enhancement - RG">219e4696a08832107f441b8d9cac5c43</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>619e4696a08832107f441b8d9cac5c46</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19964cec9d50000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<table/>
+<target_name>c6bad59ea08032107f441b8d9cac5cb4</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>46cb391e1cc432109cf7c0327e80a7a8</update_guid>
+<update_guid_history>46cb391e1cc432109cf7c0327e80a7a8:-791132028,94f8319643c4321037ea413be256a984:-791132028</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>basic_auth_credentials_1847ab77947322107f449d90583c5e79</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="basic_auth_credentials"><basic_auth_credentials action="INSERT_OR_UPDATE"><active>true</active><application display_value="EC2 Monitoring and Remediation">59818d3f487b22107f44bce61d34c895</application><applies_to>all</applies_to><authentication_key/><authentication_protocol/><classification>basic_auth</classification><context_name/><credential_id/><credential_storage_vault display_value="CyberArk">2bb9bebab7462010eca29a85de11a96d</credential_storage_vault><credential_store_type>other</credential_store_type><lookup_key>credential_id</lookup_key><mid_list/><name>AWS Integration Server Credentials</name><order>100</order><password>﷞﷟﷒1f186bf7947322107f449d90583c5e5d﷬﷔1﷬﷭SDFTQc2H_Eha7vh2Wukz6g==avykkSG9YwUK3v5K_F5n1ObD_dWkfOIooi6ZoQ==﷮﷯</password><privacy_key/><privacy_protocol/><ssh_certificate/><ssh_passphrase/><ssh_private_key/><sys_class_name>basic_auth_credentials</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-12 15:16:47</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>1847ab77947322107f449d90583c5e79</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-12 15:16:47</sys_updated_on><tag/><type>basic_auth</type><use_context>false</use_context><use_high_security>false</use_high_security><user_name>admin</user_name></basic_auth_credentials></record_update>]]></payload>
+<payload_hash>-1794321838</payload_hash>
+<remote_update_set display_value="EC2_AI_Enhancement - RG">219e4696a08832107f441b8d9cac5c43</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>659e4696a08832107f441b8d9cac5c43</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19964d2096e0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<table/>
+<target_name>AWS Integration Server Credentials</target_name>
+<type>Basic Auth Credentials</type>
+<update_domain>global</update_domain>
+<update_guid>0e9c755e28c4321002e13679b06f4739</update_guid>
+<update_guid_history>0e9c755e28c4321002e13679b06f4739:-1794321838,0ea67d04808472108a84c72812616123:-1794321838</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_75eea9daa04432107f441b8d9cac5c8d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="EC2 Remediation Assistant">bd4efe256c4032107f445a580b36c625</agent><context/><conversation display_value="Created 2025-09-20 00:52:02">deee6d5ea04432107f441b8d9cac5c04</conversation><objective>help me resolve INC0010028</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-20 00:52:01</sys_created_on><sys_domain>global</sys_domain><sys_id>75eea9daa04432107f441b8d9cac5c8d</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-20 00:52:43</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>1006549392</payload_hash>
+<remote_update_set display_value="EC2_AI_Enhancement - RG">219e4696a08832107f441b8d9cac5c43</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>659e4696a08832107f441b8d9cac5c45</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19964cec94c0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<table/>
+<target_name>75eea9daa04432107f441b8d9cac5c8d</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>42cb391e9ac432101612f11086a71fa2</update_guid>
+<update_guid_history>42cb391e9ac432101612f11086a71fa2:1006549392,ede8bd5645c432106738021333c53cc8:1006549392</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_493ad95ea08032107f441b8d9cac5c27</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="EC2 Remediation Assistant">bd4efe256c4032107f445a580b36c625</agent><context/><conversation display_value="Created 2025-09-19 23:21:35">9d3a9d5ea08032107f441b8d9cac5c1d</conversation><objective>help me with INC0010028
+</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-19 23:21:34</sys_created_on><sys_domain>global</sys_domain><sys_id>493ad95ea08032107f441b8d9cac5c27</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-19 23:22:23</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>852847531</payload_hash>
+<remote_update_set display_value="EC2_AI_Enhancement - RG">219e4696a08832107f441b8d9cac5c43</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>699e4696a08832107f441b8d9cac5c44</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19964cec88a0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<table/>
+<target_name>493ad95ea08032107f441b8d9cac5c27</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>46cb351e65c432107877e9a58e8d5155</update_guid>
+<update_guid_history>46cb351e65c432107877e9a58e8d5155:852847531,a9e8bd561ac43210ba36a68822874fb8:852847531</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>http_connection_8312e77b943322107f449d90583c5eae</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="http_connection"><http_connection action="INSERT_OR_UPDATE"><active>true</active><app_scope display_value="EC2 Monitoring and Remediation">59818d3f487b22107f44bce61d34c895</app_scope><application display_value="ALL">35aa573fd7802200bdbaee5b5e610375</application><base_path>/api/v1/queue/start</base_path><capabilities/><connection_alias display_value="x_snc_ec2_monito_0.AWS_Integration_Server_C_C_Alias">30f1237b943322107f449d90583c5ef9</connection_alias><connection_retries>0</connection_retries><connection_timeout/><connection_url>https://codon-staging.emaginelc.com/api/v1/queue/start</connection_url><credential display_value="AWS Integration Server Credentials">1847ab77947322107f449d90583c5e79</credential><extended_attributes/><host>codon-staging.emaginelc.com</host><is_internal>false</is_internal><mid_cluster/><mid_protocol_profile/><mid_selection>auto_select</mid_selection><mid_server/><mutual_auth>false</mutual_auth><name>AWS Integration Server Connection</name><order>100</order><port/><protocol>https</protocol><protocol_profile/><sys_class_name>http_connection</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-12 14:58:30</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>8312e77b943322107f449d90583c5eae</sys_id><sys_mod_count>4</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-12 17:42:16</sys_updated_on><url_builder>true</url_builder><use_mid>false</use_mid></http_connection><sys_variable_value action="delete_multiple" query="document_key=8312e77b943322107f449d90583c5eae"/></record_update>]]></payload>
+<payload_hash>1280077284</payload_hash>
+<remote_update_set display_value="EC2_AI_Enhancement - RG">219e4696a08832107f441b8d9cac5c43</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>6d9e4696a08832107f441b8d9cac5c43</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19964d1dcaf0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<table/>
+<target_name>AWS Integration Server Connection</target_name>
+<type>HTTP(s) Connection</type>
+<update_domain>global</update_domain>
+<update_guid>5f8c759e2fc4321018f005e4700fcb56</update_guid>
+<update_guid_history>5f8c759e2fc4321018f005e4700fcb56:1280077284,9f2e6d40a74472104a9042dd5007aabe:1280077284</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_59757d1ea08432107f441b8d9cac5c1a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="EC2 Remediation Assistant">bd4efe256c4032107f445a580b36c625</agent><context/><conversation display_value="Created 2025-09-20 01:20:40">ad75755ea08432107f441b8d9cac5c5c</conversation><objective>help me resolve INC0010028</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-20 01:20:39</sys_created_on><sys_domain>global</sys_domain><sys_id>59757d1ea08432107f441b8d9cac5c1a</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-20 01:21:21</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>-1406449632</payload_hash>
+<remote_update_set display_value="EC2_AI_Enhancement - RG">219e4696a08832107f441b8d9cac5c43</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>a19e4696a08832107f441b8d9cac5c45</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19964cec9260000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<table/>
+<target_name>59757d1ea08432107f441b8d9cac5c1a</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>0acb391e76c432102bc11c819fbe83a0</update_guid>
+<update_guid_history>0acb391e76c432102bc11c819fbe83a0:-1406449632,ade8bd56c7c432109d09aa016aacfbbf:-1406449632</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_0ae8ddd6a08032107f441b8d9cac5cc9</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="EC2 Remediation Assistant">bd4efe256c4032107f445a580b36c625</agent><context/><conversation display_value="Created 2025-09-19 23:15:56">1ae8599aa08032107f441b8d9cac5c9d</conversation><objective>help me with INC0010028</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-19 23:15:55</sys_created_on><sys_domain>global</sys_domain><sys_id>0ae8ddd6a08032107f441b8d9cac5cc9</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-19 23:16:47</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>1160408544</payload_hash>
+<remote_update_set display_value="EC2_AI_Enhancement - RG">219e4696a08832107f441b8d9cac5c43</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>a59e4696a08832107f441b8d9cac5c44</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19964cec8770000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<table/>
+<target_name>0ae8ddd6a08032107f441b8d9cac5cc9</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>0ecb351ef2c432106b704bf4ca8a9a53</update_guid>
+<update_guid_history>0ecb351ef2c432106b704bf4ca8a9a53:1160408544,a5e8f5160cc4321047673d23c6c0bfad:1160408544</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>x_snc_ec2_monito_0_ec2_instance_50a3c1b348bb22107f44bce61d34c845</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_snc_ec2_monito_0_ec2_instance"><x_snc_ec2_monito_0_ec2_instance action="INSERT_OR_UPDATE"><instance_id>i-0713d1873867ce592</instance_id><instance_name>Codon-172-6</instance_name><instance_status>ON</instance_status><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-12 03:18:07</sys_created_on><sys_id>50a3c1b348bb22107f44bce61d34c845</sys_id><sys_mod_count>9</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-19 23:18:06</sys_updated_on></x_snc_ec2_monito_0_ec2_instance></record_update>]]></payload>
+<payload_hash>37635429</payload_hash>
+<remote_update_set display_value="EC2_AI_Enhancement - RG">219e4696a08832107f441b8d9cac5c43</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>a99e4696a08832107f441b8d9cac5c46</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19964a0d7600000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<table/>
+<target_name>50a3c1b348bb22107f44bce61d34c845</target_name>
+<type>EC2 Instance</type>
+<update_domain>global</update_domain>
+<update_guid>0b40b91219843210ad43472496c7048e</update_guid>
+<update_guid_history>0b40b91219843210ad43472496c7048e:37635429,cacce18cb504721000e17e5f2bde0a0e:-69922673</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_ad3207ad6c4032107f445a580b36c60d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="EC2 Remediation Assistant">bd4efe256c4032107f445a580b36c625</agent><context/><conversation display_value="Created 2025-09-17 23:00:36">1a32cbad6c4032107f445a580b36c697</conversation><objective>Turn EC2 Instance, instance_id,-0713d1873867ce592, on.</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-17 23:00:33</sys_created_on><sys_domain>global</sys_domain><sys_id>ad3207ad6c4032107f445a580b36c60d</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-17 23:02:04</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>-1859037841</payload_hash>
+<remote_update_set display_value="EC2_AI_Enhancement - RG">219e4696a08832107f441b8d9cac5c43</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>ad9e4696a08832107f441b8d9cac5c45</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19964cec9bc0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<table/>
+<target_name>ad3207ad6c4032107f445a580b36c60d</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>0ecb391e2cc43210923f650ff74baca6</update_guid>
+<update_guid_history>0ecb391e2cc43210923f650ff74baca6:-1859037841,f5e8bd5617c432100ab746a3b083abd7:-1859037841</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_agent_tool_m2m_20714f2d6c4032107f445a580b36c699</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m"><sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE"><active>true</active><agent display_value="EC2 Remediation Assistant">bd4efe256c4032107f445a580b36c625</agent><description>Initiates remediation of an AWS EC2 instance by calling the existing EC2RemediationHelper logic.</description><display_output>true</display_output><execution_mode>copilot</execution_mode><inputs>[{"name":"instance_id","value":"","description":"The AWS EC2 instance ID that should be remediated.","invalidMessage":null}]</inputs><max_auto_executions>10</max_auto_executions><name>EC2 Remediation Tool</name><output_transformation_strategy>none</output_transformation_strategy><run_as/><sys_class_name>sn_aia_agent_tool_m2m</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-17 22:57:13</sys_created_on><sys_domain>global</sys_domain><sys_id>20714f2d6c4032107f445a580b36c699</sys_id><sys_mod_count>3</sys_mod_count><sys_name>EC2 Remediation Tool</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sn_aia_agent_tool_m2m_20714f2d6c4032107f445a580b36c699</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-19 22:39:02</sys_updated_on><tool display_value="EC2 Remediation Tool">a4714fe56c4032107f445a580b36c6db</tool></sn_aia_agent_tool_m2m></record_update>]]></payload>
+<payload_hash>-848222982</payload_hash>
+<remote_update_set display_value="EC2_AI_Enhancement - RG">219e4696a08832107f441b8d9cac5c43</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>e19e4696a08832107f441b8d9cac5c44</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19964c2526e0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<table/>
+<target_name>EC2 Remediation Tool</target_name>
+<type>Agent Tool</type>
+<update_domain>global</update_domain>
+<update_guid>bea8b116edc4321083f156ea7c45b25e</update_guid>
+<update_guid_history>bea8b116edc4321083f156ea7c45b25e:-848222982,31701d96084032101287a803559d3033:-848222982,68ff0956e34032100acc7ce303046023:-2134331189,dcbfc916fc40321011bb774665d92c46:-1781355335,20714f2d26403210be718d0cb71e2c9e:-848222982</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="EC2 Monitoring and Remediation">59818d3f487b22107f44bce61d34c895</application>
+<category>customer</category>
+<comments/>
+<name>sys_alias_30f1237b943322107f449d90583c5ef9</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_alias"><sys_alias action="INSERT_OR_UPDATE"><configuration_template/><connection_type>http_connection</connection_type><id>x_snc_ec2_monito_0.AWS_Integration_Server_C_C_Alias</id><is_internal>false</is_internal><multiple_connections>false</multiple_connections><name>AWS Integration Server C C Alias</name><parent/><retry_policy display_value="Default HTTP Retry Policy">ef751ff07301330025d71afe2ff6a7f9</retry_policy><sys_class_name>sys_alias</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-12 14:50:09</sys_created_on><sys_id>30f1237b943322107f449d90583c5ef9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_snc_ec2_monito_0.AWS_Integration_Server_C_C_Alias</sys_name><sys_package display_value="EC2 Monitoring and Remediation" source="x_snc_ec2_monito_0">59818d3f487b22107f44bce61d34c895</sys_package><sys_policy/><sys_scope display_value="EC2 Monitoring and Remediation">59818d3f487b22107f44bce61d34c895</sys_scope><sys_update_name>sys_alias_30f1237b943322107f449d90583c5ef9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-12 14:50:09</sys_updated_on><type>connection</type></sys_alias></record_update>]]></payload>
+<payload_hash>1048554783</payload_hash>
+<remote_update_set display_value="EC2_AI_Enhancement - RG">219e4696a08832107f441b8d9cac5c43</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>e59e4696a08832107f441b8d9cac5c46</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19964d1c0fe0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<table/>
+<target_name>x_snc_ec2_monito_0.AWS_Integration_Server_C_C_Alias</target_name>
+<type>Connection &amp; Credential Aliases</type>
+<update_domain>global</update_domain>
+<update_guid>ed8cf19eeec43210b209e2be3caf0f72</update_guid>
+<update_guid_history>ed8cf19eeec43210b209e2be3caf0f72:1048554783,9502637b5f3322102b90bd286a274827:1048554783</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_9909a112a04432107f441b8d9cac5c86</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="EC2 Remediation Assistant">bd4efe256c4032107f445a580b36c625</agent><context/><conversation display_value="Created 2025-09-20 00:26:20">2509a512a04432107f441b8d9cac5c51</conversation><objective>Help me solve incident INC0010028</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-20 00:26:19</sys_created_on><sys_domain>global</sys_domain><sys_id>9909a112a04432107f441b8d9cac5c86</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-20 00:27:40</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>-471367102</payload_hash>
+<remote_update_set display_value="EC2_AI_Enhancement - RG">219e4696a08832107f441b8d9cac5c43</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>e99e4696a08832107f441b8d9cac5c45</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19964cec9940000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<table/>
+<target_name>9909a112a04432107f441b8d9cac5c86</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>c2cb391e8ec4321067bd349dd95fe6a5</update_guid>
+<update_guid_history>c2cb391e8ec4321067bd349dd95fe6a5:-471367102,21e8bd5634c432108ce82a8644073cd2:-471367102</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sn_aia_execution_plan_51923956a08432107f441b8d9cac5cb5</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_execution_plan"><sn_aia_execution_plan action="INSERT_OR_UPDATE"><agent display_value="EC2 Remediation Assistant">bd4efe256c4032107f445a580b36c625</agent><context/><conversation display_value="Created 2025-09-20 01:08:06">25923956a08432107f441b8d9cac5cf7</conversation><objective>help me resolve INC0010028</objective><related_task_record/><related_task_table/><state>completed</state><status/><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-20 01:08:05</sys_created_on><sys_domain>global</sys_domain><sys_id>51923956a08432107f441b8d9cac5cb5</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-20 01:09:05</sys_updated_on><team/><usecase/></sn_aia_execution_plan></record_update>]]></payload>
+<payload_hash>-108840937</payload_hash>
+<remote_update_set display_value="EC2_AI_Enhancement - RG">219e4696a08832107f441b8d9cac5c43</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-09-20 03:10:27</sys_created_on>
+<sys_id>ed9e4696a08832107f441b8d9cac5c44</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19964cec8aa0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-09-20 03:10:27</sys_updated_on>
+<table/>
+<target_name>51923956a08432107f441b8d9cac5cb5</target_name>
+<type>Execution Plan</type>
+<update_domain>global</update_domain>
+<update_guid>c6cb351e27c43210b6aaf2bbd00b8e58</update_guid>
+<update_guid_history>c6cb351e27c43210b6aaf2bbd00b8e58:-108840937,25e8bd56ecc4321013248ef5d1fdcabc:-108840937</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
