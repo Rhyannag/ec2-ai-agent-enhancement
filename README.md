@@ -129,6 +129,7 @@ All results are logged to the **Remediation Log table**, ensuring consistency be
 ## Architecture Diagram
 The following diagram shows how both manual and AI-enhanced flows work:
 
+![System Architecture](Diagram.png)  
 
 
 ---
